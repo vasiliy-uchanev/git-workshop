@@ -25,11 +25,13 @@ int melodyLength = 4;
 
 void setup()
 {
+    Serial.begin(115200);
     buzzer.setMelody(notes, durations, melodyLength);
 }
 
 void loop()
 {
+    Serial.print("test");
     buzzer.playSound();
 
     if (buttonOff.wasPressed())
